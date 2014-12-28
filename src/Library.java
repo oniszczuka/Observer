@@ -17,6 +17,7 @@ public class Library implements Observer {
     LinkedList<trackMusic> lib = new LinkedList<trackMusic>();
 
     private trackMusic track;
+    private double sum_price;
 
     public void addTrack(trackMusic track) {
         if (lib.contains(track)) {
@@ -57,10 +58,19 @@ public class Library implements Observer {
             }
         }
     }
+    
+    public void sumPrice(trackMusic track)
+    {
+        this.sum_price += track.getPrice();
+    }
+
+    public void getSumPrice() 
+    {
+        System.out.println("\n### Całkowity koszt odsłuchania wszystkich utworów wynosi: " + this.sum_price + " #");
+    }     
 
     @Override
     public void update(Observable o, Object arg) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.sumPrice((trackMusic) o);        
     }
-
 }

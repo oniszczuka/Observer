@@ -33,9 +33,12 @@ public class main {
         lib.allTracks();
 
         System.out.println(track1.playTrack());
-
+        System.out.println(track2.playTrack());
+        System.out.println(track5.playTrack());
+        
         lib.removeTrack(track1);
-
+        
+        lib.getSumPrice();
     }
 
 }

@@ -47,8 +47,8 @@ public class trackMusic extends Observable {
     }
 
     public String playTrack() {
-        notifyObservers();
         setChanged();
+        notifyObservers();        
         return "### Rozpoczęcie odtwarzania: " + getContractor() + " - " + getName() + "\n" + "Koszt: " + getPrice() + " $";
     }
 
