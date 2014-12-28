@@ -22,11 +22,13 @@ public class main {
         trackMusic track2 = new trackMusic("Tytul", "Wykonawca", 1.52);
         trackMusic track3 = new trackMusic("List do M", "Dzem", 14.52);
         trackMusic track4 = new trackMusic("Whiskey Dream VIP", "Rudebrat", 14.52);
+        trackMusic track5 = new trackMusic("Nowy tytul", "Nowy wykonawca", 10.52);
         
         lib.addTrack(track1);
         lib.addTrack(track4);
         lib.addTrack(track2);
         lib.addTrack(track3);
+        lib.addTrack(track5);
 
         lib.allTracks();
 
